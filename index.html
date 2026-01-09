@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Dodger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Shape Dodger</h1>
+</header>
+
+<main>
+    <!-- Start Menu -->
+    <section id="menu" aria-label="Game Menu">
+        <h2>Select Difficulty</h2>
+
+        <label for="difficultySelect">Difficulty</label>
+        <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            <option value="expert">Expert</option>
+        </select>
+
+        <button id="startBtn">Start Game</button>
+
+        <aside aria-label="Leaderboard">
+            <h3>🏆 Leaderboard</h3>
+            <ol id="leaderboard"></ol>
+        </aside>
+    </section>
+
+    <!-- Game Area -->
+    <section id="gameUI" hidden>
+        <div id="ui">
+            <span>Score: <strong id="score">0</strong></span>
+            <span>Time: <strong id="timer">0</strong>s</span>
+            <span>Difficulty: <strong id="difficultyText">Easy</strong></span>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="550" aria-label="Game Canvas"></canvas>
+    </section>
+</main>
+
+<footer>
+    <small>© Shape Dodger</small>
+</footer>
+
+<script src="game.js" defer></script>
+</body>
+</html>
